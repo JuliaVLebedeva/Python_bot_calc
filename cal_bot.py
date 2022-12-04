@@ -52,7 +52,7 @@ async def calc_mult(message: types.Message):
 async def show_log(message: types.Message):
     try:
         with open('log_bot.txt', 'r', encoding='utf-8') as log:
-            log_list = log.open().splitlines()
+            log_list = log.read().splitlines()
             msg = log_list[:20]
     except:
         msg = 'Что-то пошло не так'
